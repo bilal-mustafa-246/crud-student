@@ -1,6 +1,7 @@
 package com.demo.config;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 public class DBUtil {
 
