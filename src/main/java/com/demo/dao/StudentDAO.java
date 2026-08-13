@@ -16,20 +16,19 @@ public class StudentDAO {
     // Create table if it doesn't exist
     private void createTable() {
 
-        String sql = """
-                CREATE TABLE IF NOT EXISTS student (
-                    id INT PRIMARY KEY AUTO_INCREMENT,
-                    name VARCHAR(100) NOT NULL,
-                    email VARCHAR(100) NOT NULL,
-                    course VARCHAR(100) NOT NULL
-                )
-                """;
-
+        String sql =
+                "CREATE TABLE IF NOT EXISTS student (" +
+                "id INT PRIMARY KEY AUTO_INCREMENT, " +
+                "name VARCHAR(100) NOT NULL, " +
+                "email VARCHAR(100) NOT NULL, " +
+                "course VARCHAR(100) NOT NULL" +
+                ")";
+    
         try (Connection con = DBUtil.getConnection();
              Statement stmt = con.createStatement()) {
-
+    
             stmt.execute(sql);
-
+    
         } catch (Exception e) {
             e.printStackTrace();
         }
