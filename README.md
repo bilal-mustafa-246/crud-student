@@ -1,1 +1,1 @@
-#This is a student management system demonstrating simple CRUD operations using Java + SQLite
+#This is a student management system demonstrating simple CRUD operations using Java + MySQL
